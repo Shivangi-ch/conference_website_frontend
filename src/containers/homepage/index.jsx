@@ -7,6 +7,9 @@ import { MoreAboutSection } from "./moreAboutSection";
 import { ReviewsSection } from "./reviewsSection";
 import { ServicesSection } from "./servicesSection";
 import { TopSection } from "./topSection";
+import { SupportedbySection } from "./supportedby";
+import { LocationSection } from "./location";
+import Fade from 'react-reveal/Fade';
 
 const PageContainer = styled.div`
   width: 100%;
@@ -20,12 +23,19 @@ export function Homepage(props) {
     <PageContainer>
       
       <TopSection />
+      
+          <MoreAboutSection />
+        
+      <Fade left>
       <ServicesSection />
-      <MoreAboutSection /> 
-      <Marginer direction="vertical" margin="2em" />
+       </Fade>
+      
+      <SupportedbySection />
+      
+      <LocationSection />
       <ReviewsSection />
+      
      
-      <Marginer direction="vertical" margin="8em" />
       <Footer />
     </PageContainer>
   );

@@ -2,14 +2,15 @@ import React from "react";
 import { Element } from "react-scroll";
 import styled from "styled-components";
 import { SectionTitle } from "../../components/sectionTitle";
-import AboutImgUrl from "../../assets/illustrations/i12.jpg";
 
+import Fade from 'react-reveal/Fade';
 
 
 const MoreAboutContainer = styled(Element)`
   min-height: 600px;
   display: flex;
   flex-direction: column;
+  background-color:#f3f3f3;
   align-items: center;
   padding: 0 1em;
 `;
@@ -27,9 +28,9 @@ const AboutContainer = styled.div`
 `;
 
 const AboutText = styled.p`
-  font-size: 21px;
+  font-size: 19px;
   text-shadow:  black;
-  font-weight: bold;
+ 
  
   
   color: grey;
@@ -78,14 +79,17 @@ const AboutImg = styled.img`
 export function MoreAboutSection(props) {
   return (
     <MoreAboutContainer>
-     
-      <SectionTitle style={{ fontSize: '50px' ,color: 'black'}}>The Path to Success</SectionTitle>
+     <Fade left>
+      <SectionTitle style={{ fontSize: '40px' ,color: '#292929',marginLeft:'-650px',letterSpacing:'1px',marginTop:'70px'}}>ABOUT <span style={{color:'red'}}>CONFERENCE</span></SectionTitle>
+      </Fade>
       <AboutContainer>
+      <Fade right>
         <AboutText>
           
-
-<i>"Electura lays a path of realizable and practical knowledge for young minds, <br></br>by acting as a rendezvous between them and high academic achievers, through technology."</i>        </AboutText>
-        <AboutImg src={AboutImgUrl} />
+        International Conference on Innovative Computing and Communication (ICICC 2022) is organised with the objective of bringing together innovative scientists, professors, research scholars, students and industrial experts in the field of Computing and Communication to a common forum. The primary goal of the conference is to promote the exchange of innovative scientific information between researchers, developers, engineers, students, and practitioners. Another goal is to promote the transformation of fundamental research into institutional and industrialized research and to convert applied exploration into real time application. Overall the conference will provide the researchers and attendees with prospects for national and international collaboration and networking among universities and institutions from India and abroad for promoting research. ICICC- 2022 will be held at Shaheed Sukhdev College of Business Studies, University of Delhi, New Delhi in association with National Institute of Technology, Patna All the accepted papers (after double blinded peer review) are published in Springer(Approval Pending) AISC series and extended selected papers will be published in the special issues of SCI/SCOPUS/WoS/DBLP/ACM indexed Journals.
+     </AboutText>
+     </Fade>
+ 
       </AboutContainer>
     </MoreAboutContainer>
   );

@@ -7,10 +7,8 @@ import { Marginer } from "../marginer";
 const CardContainer = styled.div`
   width: 350px;
   height: 430px;
-  background-color: white;
- 
- 
 
+ 
   margin: 5px 0;
   position: relative;
   padding: 10px 1.2em;
@@ -42,7 +40,7 @@ const UserDetails = styled.div`
 const UserImg = styled.img`
   width: 60px;
   height: 240px;
- 
+    background-color:red;
   margin-right: 10px;
 `;
 
@@ -55,13 +53,12 @@ export function ReviewCard(props) {
   const { reviewText, username, userImgUrl } = props;
 
   return (
-    <CardContainer>
+    <CardContainer style={{backgroundColor:"red"}}>
       
         
       
       <Marginer direction="vertical" margin="1em" />
-      <ReviewText>{reviewText}</ReviewText>
-      
+     
     
       <UserDetails>
         <UserImg src={userImgUrl} />

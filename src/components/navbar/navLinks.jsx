@@ -12,6 +12,7 @@ const NavLinksContainer = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+  margin-left:140px;
 
 
 `;
@@ -27,19 +28,21 @@ const LinksWrapper = styled.ul`
 
 const LinkItem = styled.li`
   height: 100%;
-  padding: 0 1.1em;
-  color: black;
+  padding: 0 1.4em;
+  color:grey;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 12px;
+  text-transform: uppercase;
   letter-spacing:1px;
-  font-family:'sans serif';
+  // font-family:'sans serif';
   align-items: center;
   justify-content: center;
   display: flex;
   border-top: 1px solid transparent;
   transition: all 220ms ease-in-out;
   &:hover {
-    border-top: 4px solid yellow;;
+    border-bottom: 3px solid red;
+    color:red;
    
   }
 `;
@@ -58,35 +61,30 @@ export function NavLinks(props) {
           {/* <Switch> */}
             {/* <Route path="/" exact> */}
               <LinkItem>
-                <Link type="button" to="/home" style={{ textDecoration: 'none' ,color: 'black'}}>Home</Link>
+                <Link type="button" to="/home" style={{ textDecoration: 'none' ,color: 'grey'}}>Home</Link>
               </LinkItem>
               <LinkItem>
-                <Link type="button" to="/about" style={{ textDecoration: 'none' ,color: 'black'}}>About</Link>
+                <Link type="button" to="/about" style={{ textDecoration: 'none' ,color: 'grey'}}>About</Link>
               </LinkItem>
               <LinkItem>
-                <Link type="button" to="/tutors" style={{ textDecoration: 'none' ,color: 'black'}}>Special Sessions</Link>
+                <Link type="button" to="/tutors" style={{ textDecoration: 'none' ,color: 'grey'}}>Special Sessions</Link>
               </LinkItem>
               <LinkItem>
-                <Link type="button" to="/courses" style={{ textDecoration: 'none' ,color: 'black'}}>Workshops</Link>
+                <Link type="button" to="/courses" style={{ textDecoration: 'none' ,color: 'grey'}}>Workshops</Link>
               </LinkItem>
               <LinkItem>
-                <Link type="button" to="/contact" style={{ textDecoration: 'none' ,color: 'black'}}>Registrations</Link>
+                <Link type="button" to="/contact" style={{ textDecoration: 'none' ,color: 'grey'}}>Registrations</Link>
               </LinkItem>
               <LinkItem>
-                <Link type="button" to="/contact" style={{ textDecoration: 'none' ,color: 'black'}}>Sponsorship</Link>
+                <Link type="button" to="/contact" style={{ textDecoration: 'none' ,color: 'grey'}}>Sponsorship</Link>
               </LinkItem>
               <LinkItem>
-                <Link type="button" to="/contact" style={{ textDecoration: 'none' ,color: 'black'}}>Publications</Link>
+                <Link type="button" to="/contact" style={{ textDecoration: 'none' ,color: 'grey'}}>Publications</Link>
               </LinkItem>
               <LinkItem>
-                <Link type="button" to="/contact" style={{ textDecoration: 'none' ,color: 'black'}}>Committee</Link>
+                <Link type="button" to="/contact" style={{ textDecoration: 'none' ,color: 'grey'}}>Committee</Link>
               </LinkItem>
-              <LinkItem>
-                <Link type="button" to="/contact" style={{ textDecoration: 'none' ,color: 'black'}}>Awards</Link>
-              </LinkItem>
-              <LinkItem>
-                <Link type="button" to="/contact" style={{ textDecoration: 'none' ,color: 'black'}}>Downloads</Link>
-              </LinkItem>
+            
 
             {/* </Route> */}
 

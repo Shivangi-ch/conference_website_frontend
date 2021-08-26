@@ -12,7 +12,7 @@ const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
- background-color:#000000;
+ background-color:#292929;
   position: relative;
 `;
 
@@ -20,7 +20,7 @@ const MotivationalText = styled.h1`
   font-size: 20px;
   font-weight: 500;
   line-height: 1.4;
-  color: white;
+  color: #f3f3f3;
   margin: 0;
 `;
 
@@ -108,10 +108,10 @@ export function Footer(props) {
   return (
     <FooterContainer>
       <Marginer direction="vertical" margin="5em" />
-      <Logo small />
+      
       <Marginer direction="vertical" margin="1em" />
-      <MotivationalText>An investment in knowledge </MotivationalText>
-      <MotivationalText>Pays the best interest</MotivationalText>
+      <MotivationalText>GET YOUR SEAT </MotivationalText>
+     <button style={{backgroundColor:"red",padding:"1rem", marginTop:"20px",color:"white"}}>CHECK OUT TICKETS</button>
       <Marginer direction="vertical" margin="1em" />
       
       <Marginer direction="vertical" margin="5em" />

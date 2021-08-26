@@ -18,7 +18,7 @@ const ArrowContainer = styled.div`
   cursor: pointer;
 
   &:hover {
-    border: 2px solid ${theme.primary};
+    border: 2px solid red};
   }
 `;
 

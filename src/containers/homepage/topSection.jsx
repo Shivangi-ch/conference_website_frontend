@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { DownArrow } from "../../components/downArrow";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
+import UImg from "../../assets/images/Ajay-Kumar-Garg-Engineering-College-Ghaziabad.png";
 import { Logo } from "../../components/logo";
 import { Marginer } from "../../components/marginer";
 import { Navbar } from "../../components/navbar";
@@ -14,7 +14,7 @@ import { Navbar } from "../../components/navbar";
 
 const TopContainer = styled.div`
   width: 100%;
-  height: 120vh;
+  height: 100vh;
   padding: 0;
   
 `;
@@ -39,7 +39,7 @@ const MotivationalText = styled.h1`
   display:flex;
   align-items:center;
   margin-top:-120px;
-  
+  z-index:1;
   color: black;
   margin-left: 320px;
   
@@ -66,22 +66,23 @@ export function TopSection(props) {
     <Element name="topSection">
       <TopContainer>
         <Logo />
-        <MotivationalText>5TH INTERNATIONAL CONFERENCE ON INNOVATIVE COMPUTING AND COMMUNICATION (ICICC 2022)</MotivationalText>
-        <Extratext> ORGANISED BY: AJAY KUMAR GARG ENGINEERING COLLEGE (AKGEC) </Extratext>
-        <h4 style={{color: "black",fontSize:"14px",marginLeft:"630px",fontWeight:"lighter"}}>19-20th FEBRUARY,2022</h4>
-          <Navbar />
+        <Navbar />
+        <Marginer direction="vertical" margin="1.0em" />
+
+          
        
             <Carousel showThumbs={false}>
+              
                 <div>
-                    <img src="https://cache.careers360.mobi/media/presets/720X480/colleges/social-media/media-gallery/4552/2018/4/16/Campus-View.jpg" height="600px"/>
+                    <img src={UImg}height="620px" />
                   
                 </div>
                 <div>
-                    <img src="https://cache.careers360.mobi/media/presets/720X480/colleges/social-media/media-gallery/5050/2018/4/26/Campus-View1.jpg" height="600px"/>
+                    <img src="https://cache.careers360.mobi/media/presets/720X480/colleges/social-media/media-gallery/5050/2018/4/26/Campus-View1.jpg" height="620px"/>
                     
                 </div>
                 <div>
-                    <img src="https://images.static-collegedunia.com/public/college_data/images/appImage/1499925698mb02.jpg?tr=c-force" height="600px"/>
+                    <img src="https://images.static-collegedunia.com/public/college_data/images/appImage/1499925698mb02.jpg?tr=c-force" height="620px"/>
                     
                 </div>
             </Carousel>

@@ -20,6 +20,10 @@ const ReviewsContainer = styled(Element)`
   flex-direction: column;
   align-items: center;
   background-color:#f3f3f3;
+  background-repeat:none;
+  background-position:center;
+
+ 
   
  
 
@@ -64,12 +68,12 @@ const StyledDotGroup = styled(DotGroup)`
   }
 `;
 
-export function ReviewsSection(props) {
+export function SupportedbySection(props) {
   const isMobile = useMediaQuery({ query: "(max-width: 480px)" });
 
   return (
     <ReviewsContainer>
-    <SectionTitle style={{marginLeft:'-750px',marginTop:"80px", fontSize: '40px' ,color: '#292929',letterSpacing:'1px'}}>OUR <span style={{color:'red'}}>SPONSORS</span></SectionTitle>
+    <SectionTitle style={{marginLeft:'-750px',marginTop:"80px", fontSize: '40px' ,color: '#f3f33s',letterSpacing:'1px'}}> SUPPORTED <span style={{color:'red'}}>BY</span></SectionTitle>
       <Marginer direction="vertical" margin="3em" />
       <StyledCarouselProvider
         naturalSlideWidth={200}

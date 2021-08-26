@@ -4,48 +4,68 @@ import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
 import { OurSerivce } from "../../components/ourService";
 
-import Service1Img from "../../assets/illustrations/i1.png";
-import Service2Img from "../../assets/illustrations/i11.png";
-import Service3Img from "../../assets/illustrations/i10.png";
+import Gallery from 'react-grid-gallery';
+const IMAGES =
+[{
+        src: "https://lh6.googleusercontent.com/UiVk1w0sswyVXpVHbGJ157aPW7JPI5bB1cw2ISKrDW9n3YB9OduznVaHzlpeAaHzR2iQzlBI_M3TolQhiTFYEjgse7YU5XTjK1eDXWp--MA=w1280",
+        thumbnail: "https://lh6.googleusercontent.com/UiVk1w0sswyVXpVHbGJ157aPW7JPI5bB1cw2ISKrDW9n3YB9OduznVaHzlpeAaHzR2iQzlBI_M3TolQhiTFYEjgse7YU5XTjK1eDXWp--MA=w1280",
+        thumbnailWidth: 320,
+        thumbnailHeight: 174,
+        tags: [{value: "Dr. Yang Xiao", title: "Dr. Yang Xiao"}, {value: "IT Prof.", title: "IT Prof."}],
+        caption: "Dr. Michail (Michalis) Matthaiou  "
+},
+{
+        src: "http://yangxiao.cs.ua.edu/images/1709016_BH_177_Yang_Xiao-800x1000.jpg",
+        thumbnail: "http://yangxiao.cs.ua.edu/images/1709016_BH_177_Yang_Xiao-800x1000.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 174,
+        tags: [{value: "Dr. Yang Xiao", title: "Dr. Yang Xiao"}, {value: "IT Prof.", title: "IT Prof."}],
+        caption: "Dr. Yang Xiao"
+        
 
+       
+},
+
+{
+        src: "http://www.micc.unifi.it/berretti/assets/images/stefano-conf1-400x266.png",
+        thumbnail: "http://www.micc.unifi.it/berretti/assets/images/stefano-conf1-400x266.png",
+        tags: [{value: "Dr. Yang Xiao", title: "Dr. Yang Xiao"}, {value: "IT Prof.", title: "IT Prof."}],
+        thumbnailWidth: 320,
+        thumbnailHeight: 174,
+        caption: "Dr. Yang Xiao"
+
+}]
 const ServicesContainer = styled(Element)`
+ margin-top:400px;
+ height:100px;
+
  
-  overflow:hidden;
-  min-height: 500px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-left:170px;
- 
-  padding: 10px 0;
-  @media screen and (max-width: 480px) {
-    justify-content: center;
-    flex-direction: column;
-    margin-left:-20px;
-  }
 `;
+
+const SectionTitle = styled(Element)`
+ margin-top:-350px;
+ margin-left:150px;
+ font-size:30px;
+ font-weight:bold;
+`;
+const captionStyle = {
+  backgroundColor: "rgba(0, 0, 0, 0.8)",
+  maxHeight: "240px",
+  overflow: "hidden",
+  position: "absolute",
+  bottom: "0",
+  width: "100%",
+  color: "white",
+  padding: "2px",
+  fontSize: "90%"
+};
 
 export function ServicesSection(props) {
   return (
     <ServicesContainer name="servicesSection">
-      {/* <SectionTitle>Best Quality Software</SectionTitle> */}
-      <Marginer direction="vertical" margin="3em" />
-      <OurSerivce
-        title="Online Live Classes"
-        description="Get your concepts clear directly through a dedicated coach"
-        imgUrl={Service1Img}
-      />
-      <OurSerivce
-        title="IITian Teachers"
-        description="Premium teachers who have passed one of the toughest exams themselves"
-        imgUrl={Service2Img}
-        isReversed
-      />
-      <OurSerivce
-        title="For Classes 9th to 12th"
-        description="Changing the way of learning for 9th to 12th grade students with online 1 to 1 classes"
-        imgUrl={Service3Img}
-      />
+      <SectionTitle style={{ fontSize: '40px' ,color: '#292929',letterSpacing:'1px'}}>KEYNOTE <span style={{color:'red'}}>SPEAKERS</span></SectionTitle> 
+      <Gallery  images={IMAGES} margin={74} />
     </ServicesContainer>
   );
 }
+

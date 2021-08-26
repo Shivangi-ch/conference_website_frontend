@@ -8,13 +8,14 @@ import { DeviceSize } from "../responsive";
 import { MobileNavLinks } from "./mobileNavLinks";
 
 const NavbarContainer = styled.div`
-  width: 100%;
+  width: 80%;
   height: 60px;
   background-color:white;
-  
+  margin-top:-60px;
+  margin-left:250px;
   display: flex;
   align-items: center;
-  // padding: 0 1.2em;
+ padding: 0 1.2em;
 `;
 
 const LeftSection = styled.div`
